@@ -69,10 +69,10 @@ router.post("/", (req, res) => {
     ],
   };
 
-  parsedVideos.push(newVideo);
+  parsedLogs.push(newLog);
 
-  fs.writeFileSync("./data/videos.json", JSON.stringify(parsedVideos));
-  res.status(201).json(newVideo);
+  fs.writeFileSync("./data/logs.json", JSON.stringify(parsedLogs));
+  res.status(201).json(newLog);
 });
 
 export default router;
