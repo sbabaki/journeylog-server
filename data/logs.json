@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Europe Getaway",
+    "cities": [
+      {
+        "id": 1,
+        "name": "Paris, France",
+        "image": "https://via.placeholder.com/150",
+        "notes": [
+          { "date": "2024-01-01", "note": "Visited the Eiffel Tower and had croissants at a local café." },
+          { "date": "2024-01-02", "note": "Toured the Louvre Museum." }
+        ],
+        "restaurants": [
+          { "name": "Le Meurice", "notes": "Fine dining experience with classic French cuisine.", "rating": 4.8 },
+          { "name": "L'Ambroisie", "notes": "Overpriced and pretentious.", "rating": 2.5 },
+          { "name": "Epicure", "notes": "Incredible tasting menu.", "rating": 4.9 }
+        ],
+        "accommodations": [
+          { "name": "Hotel Le Meurice", "notes": "Luxurious stay with excellent service.", "rating": 4.6 },
+          { "name": "The Peninsula Paris", "notes": "Beautiful but noisy location.", "rating": 3.2 }
+        ],
+        "attractions": [
+          { "name": "Eiffel Tower", "notes": "Iconic landmark with breathtaking views.", "rating": 4.9 },
+          { "name": "Louvre Museum", "notes": "Crowded and overwhelming.", "rating": 3.5 }
+        ],
+        "coordinates": { "latitude": 48.8566, "longitude": 2.3522 }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Japan Discovery",
+    "cities": [
+      {
+        "id": 1,
+        "name": "Tokyo, Japan",
+        "image": "https://via.placeholder.com/150",
+        "notes": [
+          { "date": "2024-02-10", "note": "Tried sushi at Tsukiji Market and explored Shibuya Crossing." },
+          { "date": "2024-02-11", "note": "Visited the Meiji Shrine." }
+        ],
+        "restaurants": [
+          { "name": "Sukiyabashi Jiro", "notes": "Exceptional sushi experience.", "rating": 4.9 },
+          { "name": "Ichiran Ramen", "notes": "Unique dining experience.", "rating": 4.6 },
+          { "name": "Local Ramen Shop", "notes": "Terrible service and cold food.", "rating": 1.8 }
+        ],
+        "accommodations": [
+          { "name": "Park Hyatt Tokyo", "notes": "Great view of the city skyline.", "rating": 4.7 },
+          { "name": "Capsule Hotel Tokyo", "notes": "Cramped and uncomfortable.", "rating": 2.0 }
+        ],
+        "attractions": [
+          { "name": "Shibuya Crossing", "notes": "Fascinating and lively atmosphere.", "rating": 4.7 },
+          { "name": "Meiji Shrine", "notes": "Peaceful and spiritual.", "rating": 4.8 }
+        ],
+        "coordinates": { "latitude": 35.6895, "longitude": 139.6917 }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "SouthEast Asia Adventure",
+    "cities": [
+      {
+        "id": 1,
+        "name": "Bangkok, Thailand",
+        "image": "https://via.placeholder.com/150",
+        "notes": [
+          { "date": "2024-03-01", "note": "Explored the Grand Palace and tried street food." },
+          { "date": "2024-03-02", "note": "Took a boat tour along the Chao Phraya River." }
+        ],
+        "restaurants": [
+          { "name": "Gaggan Anand", "notes": "Creative Indian-Thai fusion cuisine.", "rating": 4.8 },
+          { "name": "Jay Fai", "notes": "Extremely expensive for street food.", "rating": 3.0 }
+        ],
+        "accommodations": [
+          { "name": "Mandarin Oriental Bangkok", "notes": "Luxurious riverside stay.", "rating": 4.9 },
+          { "name": "Random Hostel", "notes": "Dirty and loud.", "rating": 1.5 }
+        ],
+        "attractions": [
+          { "name": "Grand Palace", "notes": "A must-see historic site.", "rating": 4.9 },
+          { "name": "Chatuchak Market", "notes": "Overwhelming and too crowded.", "rating": 2.5 }
+        ],
+        "coordinates": { "latitude": 13.7563, "longitude": 100.5018 }
+      },
+      {
+        "id": 2,
+        "name": "Siem Reap, Cambodia",
+        "image": "https://via.placeholder.com/150",
+        "notes": [
+          { "date": "2024-03-03", "note": "Watched the sunrise at Angkor Wat." },
+          { "date": "2024-03-04", "note": "Explored the ancient ruins of Ta Prohm." }
+        ],
+        "restaurants": [
+          { "name": "Cuisine Wat Damnak", "notes": "Exquisite Cambodian fine dining.", "rating": 4.9 },
+          { "name": "Street BBQ", "notes": "Meat was undercooked and overpriced.", "rating": 2.0 }
+        ],
+        "accommodations": [
+          { "name": "Shinta Mani Angkor", "notes": "Modern and comfortable stay.", "rating": 4.8 },
+          { "name": "Budget Inn", "notes": "Noisy and bad service.", "rating": 2.2 }
+        ],
+        "attractions": [
+          { "name": "Angkor Wat", "notes": "Iconic and breathtaking.", "rating": 5.0 },
+          { "name": "Ta Prohm", "notes": "Famous for tree-covered ruins.", "rating": 4.8 }
+        ],
+        "coordinates": { "latitude": 13.4125, "longitude": 103.8669 }
+      }
+    ]
+  }
+]
