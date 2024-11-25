@@ -6,7 +6,7 @@
       {
         "id": 1,
         "name": "Paris, France",
-        "image": "https://via.placeholder.com/150",
+        "image": "/images/paris.jpg",
         "notes": [
           { "date": "2024-01-01", "note": "Visited the Eiffel Tower and had croissants at a local café." },
           { "date": "2024-01-02", "note": "Toured the Louvre Museum." }
@@ -35,7 +35,7 @@
       {
         "id": 1,
         "name": "Tokyo, Japan",
-        "image": "https://via.placeholder.com/150",
+        "image": "/images/kyoto.jpg",
         "notes": [
           { "date": "2024-02-10", "note": "Tried sushi at Tsukiji Market and explored Shibuya Crossing." },
           { "date": "2024-02-11", "note": "Visited the Meiji Shrine." }
@@ -64,7 +64,7 @@
       {
         "id": 1,
         "name": "Bangkok, Thailand",
-        "image": "https://via.placeholder.com/150",
+        "image": "/images/bangkok.jpg",
         "notes": [
           { "date": "2024-03-01", "note": "Explored the Grand Palace and tried street food." },
           { "date": "2024-03-02", "note": "Took a boat tour along the Chao Phraya River." }

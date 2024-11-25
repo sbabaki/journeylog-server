@@ -17,7 +17,7 @@ router.get("/:id", (req, res) => {
   try {
     const logs = fs.readFileSync("./data/logs.json", "utf8");
     const parsedLogs = JSON.parse(logs);
-    const foundLog = parsedLogs.find((log) => log.id === req.params.id);
+    const foundLog = parsedLogs.find((log) => log.id === parseInt(req.params.id));
     if (!foundLog) {
       return res.status(404).json({
         error: "Log not found.",
