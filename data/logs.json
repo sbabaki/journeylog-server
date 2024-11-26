@@ -2,14 +2,16 @@
   {
     "id": 1,
     "name": "Europe Getaway",
+    "start_date": "2024-01-01",
+    "end_date": "2024-01-10",
     "cities": [
       {
         "id": 1,
-        "name": "Paris, France",
+        "city": "Paris, France",
+        "coordinates": { "latitude": 48.8566, "longitude": 2.3522 },
         "image": "/images/paris.jpg",
         "notes": [
-          { "date": "2024-01-01", "note": "Visited the Eiffel Tower and had croissants at a local café." },
-          { "date": "2024-01-02", "note": "Toured the Louvre Museum." }
+          { "note": "A romantic city filled with world-class art, architecture, and food." }
         ],
         "restaurants": [
           { "name": "Le Meurice", "notes": "Fine dining experience with classic French cuisine.", "rating": 4.8 },
@@ -23,26 +25,47 @@
         "attractions": [
           { "name": "Eiffel Tower", "notes": "Iconic landmark with breathtaking views.", "rating": 4.9 },
           { "name": "Louvre Museum", "notes": "Crowded and overwhelming.", "rating": 3.5 }
+        ]
+      },
+      {
+        "id": 2,
+        "city": "Brussels, Belgium",
+        "coordinates": { "latitude": 50.8503, "longitude": 4.3517 },
+        "image": "/images/brussels.jpg",
+        "notes": [
+          { "note": "A vibrant city known for its chocolate, beer, and stunning architecture." }
         ],
-        "coordinates": { "latitude": 48.8566, "longitude": 2.3522 }
+        "restaurants": [
+          { "name": "Chez Leon", "notes": "Famous for its mussels and fries.", "rating": 4.7 },
+          { "name": "Comme Chez Soi", "notes": "Michelin-starred gourmet restaurant.", "rating": 4.8 }
+        ],
+        "accommodations": [
+          { "name": "Hilton Brussels", "notes": "Central location with excellent service.", "rating": 4.5 },
+          { "name": "Hostel XL", "notes": "Noisy with rude staff.", "rating": 2.1 }
+        ],
+        "attractions": [
+          { "name": "Grand Place", "notes": "Beautiful central square.", "rating": 4.9 },
+          { "name": "Atomium", "notes": "Unique architectural landmark.", "rating": 4.6 }
+        ]
       }
     ]
   },
   {
     "id": 2,
     "name": "Japan Discovery",
+    "start_date": "2024-02-01",
+    "end_date": "2024-02-15",
     "cities": [
       {
         "id": 1,
-        "name": "Tokyo, Japan",
-        "image": "/images/kyoto.jpg",
+        "city": "Tokyo, Japan",
+        "coordinates": { "latitude": 35.6895, "longitude": 139.6917 },
+        "image": "/images/tokyo.jpg",
         "notes": [
-          { "date": "2024-02-10", "note": "Tried sushi at Tsukiji Market and explored Shibuya Crossing." },
-          { "date": "2024-02-11", "note": "Visited the Meiji Shrine." }
+          { "note": "A bustling city blending ancient traditions with modern wonders." }
         ],
         "restaurants": [
           { "name": "Sukiyabashi Jiro", "notes": "Exceptional sushi experience.", "rating": 4.9 },
-          { "name": "Ichiran Ramen", "notes": "Unique dining experience.", "rating": 4.6 },
           { "name": "Local Ramen Shop", "notes": "Terrible service and cold food.", "rating": 1.8 }
         ],
         "accommodations": [
@@ -52,58 +75,70 @@
         "attractions": [
           { "name": "Shibuya Crossing", "notes": "Fascinating and lively atmosphere.", "rating": 4.7 },
           { "name": "Meiji Shrine", "notes": "Peaceful and spiritual.", "rating": 4.8 }
+        ]
+      },
+      {
+        "id": 2,
+        "city": "Kyoto, Japan",
+        "coordinates": { "latitude": 35.0116, "longitude": 135.7681 },
+        "image": "/images/kyoto.jpg",
+        "notes": [
+          { "note": "A cultural gem with stunning temples and gardens." }
         ],
-        "coordinates": { "latitude": 35.6895, "longitude": 139.6917 }
+        "restaurants": [
+          { "name": "Kikunoi", "notes": "Excellent kaiseki dining.", "rating": 4.8 }
+        ],
+        "accommodations": [
+          { "name": "Hoshinoya Kyoto", "notes": "Tranquil riverside stay.", "rating": 4.9 }
+        ],
+        "attractions": [
+          { "name": "Golden Pavilion", "notes": "Breathtaking golden temple.", "rating": 4.9 }
+        ]
       }
     ]
   },
   {
     "id": 3,
     "name": "SouthEast Asia Adventure",
+    "start_date": "2024-03-01",
+    "end_date": "2024-03-15",
     "cities": [
       {
         "id": 1,
-        "name": "Bangkok, Thailand",
+        "city": "Bangkok, Thailand",
+        "coordinates": { "latitude": 13.7563, "longitude": 100.5018 },
         "image": "/images/bangkok.jpg",
         "notes": [
-          { "date": "2024-03-01", "note": "Explored the Grand Palace and tried street food." },
-          { "date": "2024-03-02", "note": "Took a boat tour along the Chao Phraya River." }
+          { "note": "A vibrant city known for street food and historic landmarks." }
         ],
         "restaurants": [
           { "name": "Gaggan Anand", "notes": "Creative Indian-Thai fusion cuisine.", "rating": 4.8 },
           { "name": "Jay Fai", "notes": "Extremely expensive for street food.", "rating": 3.0 }
         ],
         "accommodations": [
-          { "name": "Mandarin Oriental Bangkok", "notes": "Luxurious riverside stay.", "rating": 4.9 },
-          { "name": "Random Hostel", "notes": "Dirty and loud.", "rating": 1.5 }
+          { "name": "Mandarin Oriental Bangkok", "notes": "Luxurious riverside stay.", "rating": 4.9 }
         ],
         "attractions": [
-          { "name": "Grand Palace", "notes": "A must-see historic site.", "rating": 4.9 },
-          { "name": "Chatuchak Market", "notes": "Overwhelming and too crowded.", "rating": 2.5 }
-        ],
-        "coordinates": { "latitude": 13.7563, "longitude": 100.5018 }
+          { "name": "Grand Palace", "notes": "A must-see historic site.", "rating": 4.9 }
+        ]
       },
       {
         "id": 2,
-        "name": "Siem Reap, Cambodia",
-        "image": "https://via.placeholder.com/150",
+        "city": "Siem Reap, Cambodia",
+        "coordinates": { "latitude": 13.4125, "longitude": 103.8669 },
+        "image": "/images/siemreap.jpg",
         "notes": [
-          { "date": "2024-03-03", "note": "Watched the sunrise at Angkor Wat." },
-          { "date": "2024-03-04", "note": "Explored the ancient ruins of Ta Prohm." }
+          { "note": "Home to the breathtaking Angkor Wat temples." }
         ],
         "restaurants": [
-          { "name": "Cuisine Wat Damnak", "notes": "Exquisite Cambodian fine dining.", "rating": 4.9 },
-          { "name": "Street BBQ", "notes": "Meat was undercooked and overpriced.", "rating": 2.0 }
+          { "name": "Cuisine Wat Damnak", "notes": "Exquisite Cambodian fine dining.", "rating": 4.9 }
         ],
         "accommodations": [
-          { "name": "Shinta Mani Angkor", "notes": "Modern and comfortable stay.", "rating": 4.8 },
-          { "name": "Budget Inn", "notes": "Noisy and bad service.", "rating": 2.2 }
+          { "name": "Shinta Mani Angkor", "notes": "Modern and comfortable stay.", "rating": 4.8 }
         ],
         "attractions": [
-          { "name": "Angkor Wat", "notes": "Iconic and breathtaking.", "rating": 5.0 },
-          { "name": "Ta Prohm", "notes": "Famous for tree-covered ruins.", "rating": 4.8 }
-        ],
-        "coordinates": { "latitude": 13.4125, "longitude": 103.8669 }
+          { "name": "Angkor Wat", "notes": "Iconic and breathtaking.", "rating": 5.0 }
+        ]
       }
     ]
   }
