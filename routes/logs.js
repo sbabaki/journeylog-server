@@ -30,49 +30,34 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+  try {
   const logs = fs.readFileSync("./data/logs.json", "utf8");
   const parsedLogs = JSON.parse(logs);
+
   const newLog = {
     id: uuidv4(),
     name: req.body.name,
-    cities: [
-      {
+    cities: req.body.cities.map((city) => ({
         id: uuidv4(),
-        city: req.body.city,
+        city: city.city,
+        startDate: city.startDate,
+        endDate: city.endDate,
         image: "../../IMAGE",
-        notes: [
-          {
-            id: uuidv4(),
-            note: "favourite city this trip",
-          },
-        ],
-        restaurants: [
-          {
-            name: "Olive's",
-            note: "the tartar was amazing",
-            rating: 5,
-          },
-        ],
-        accomodations: [
-          {
-            name: "Hotel Cabana",
-            notes: "Amazing infinity pool",
-            rating: 4,
-          },
-        ],
-        attractions: [{
-            name: "Cathedral Church",
-            notes: "Looks like all the other churches in the area",
-            rating: 2   
-        }]
-      },
-    ],
-  };
+        notes: [],
+        restaurants: [],
+        accomodations: [],
+        attractions: []
+      })),
+    };
 
   parsedLogs.push(newLog);
 
   fs.writeFileSync("./data/logs.json", JSON.stringify(parsedLogs));
   res.status(201).json(newLog);
+} catch (error) {
+  console.error("Error saving new log:", error);
+  res.status(500).json({error: "Failed to save new log."})
+}
 });
 
 export default router;
