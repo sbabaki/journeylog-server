@@ -17,7 +17,7 @@ router.get("/:id", (req, res) => {
   try {
     const logs = fs.readFileSync("./data/logs.json", "utf8");
     const parsedLogs = JSON.parse(logs);
-    const foundLog = parsedLogs.find((log) => log.id === parseInt(req.params.id));
+    const foundLog = parsedLogs.find((log) => log.id === req.params.id);
     if (!foundLog) {
       return res.status(404).json({
         error: "Log not found.",
@@ -31,33 +31,33 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   try {
-  const logs = fs.readFileSync("./data/logs.json", "utf8");
-  const parsedLogs = JSON.parse(logs);
+    const logs = fs.readFileSync("./data/logs.json", "utf8");
+    const parsedLogs = JSON.parse(logs);
 
-  const newLog = {
-    id: uuidv4(),
-    name: req.body.name,
-    cities: req.body.cities.map((city) => ({
+    const newLog = {
+      id: uuidv4(),
+      name: req.body.name,
+      cities: req.body.cities.map((city) => ({
         id: uuidv4(),
         city: city.city,
         startDate: city.startDate,
         endDate: city.endDate,
-        image: "../../IMAGE",
-        notes: [],
+        image: "http://localhost:3030/images/default.png",
+        note: city.note || "No note yet!",
         restaurants: [],
         accomodations: [],
-        attractions: []
+        attractions: [],
       })),
     };
 
-  parsedLogs.push(newLog);
+    parsedLogs.push(newLog);
 
-  fs.writeFileSync("./data/logs.json", JSON.stringify(parsedLogs));
-  res.status(201).json(newLog);
-} catch (error) {
-  console.error("Error saving new log:", error);
-  res.status(500).json({error: "Failed to save new log."})
-}
+    fs.writeFileSync("./data/logs.json", JSON.stringify(parsedLogs));
+    res.status(201).json(newLog);
+  } catch (error) {
+    console.error("Error saving new log:", error);
+    res.status(500).json({ error: "Failed to save new log." });
+  }
 });
 
 export default router;
