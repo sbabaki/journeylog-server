@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 4040;
 app.use(cors());
 app.use(express.static("public"))
 app.use(express.json())
-app.use("/your-log", LogRoutes)
+app.use("/", LogRoutes)
 
 
 app.get ("/", (req, res) => {

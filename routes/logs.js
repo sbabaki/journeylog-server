@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/your-logs", (req, res) => {
   try {
     const logs = fs.readFileSync("./data/logs.json", "utf8");
     res.json(JSON.parse(logs));
@@ -13,7 +13,29 @@ router.get("/", (req, res) => {
   }
 });
 
-router.get("/:id", (req, res) => {
+router.get("/journey-map", (req, res) => {
+  try {
+    const logs = fs.readFileSync("./data/logs.json", "utf8");
+    const parsedLogs = JSON.parse(logs);
+
+    const coordinates = parsedLogs.flatMap((log) =>
+      log.cities.map((city) => ({
+        city: city.city,
+        coordinates: city.coordinates,
+      }))
+    );
+    if (coordinates.length === 0) {
+      return res.status(404).json({
+        error: "No coordinates found.",
+      });
+    }
+    res.json(coordinates);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to load data." });
+  }
+});
+
+router.get("/your-logs/:id", (req, res) => {
   try {
     const logs = fs.readFileSync("./data/logs.json", "utf8");
     const parsedLogs = JSON.parse(logs);
@@ -29,7 +51,7 @@ router.get("/:id", (req, res) => {
   }
 });
 
-router.post("/", (req, res) => {
+router.post("/your-logs", (req, res) => {
   try {
     const logs = fs.readFileSync("./data/logs.json", "utf8");
     const parsedLogs = JSON.parse(logs);
@@ -42,11 +64,12 @@ router.post("/", (req, res) => {
         city: city.city,
         startDate: city.startDate,
         endDate: city.endDate,
+        coordinates: {
+          longitude: city.coordinates.longitude,
+          latitude: city.coordinates.latitude,
+        },
         image: "http://localhost:3030/images/default.png",
-        note: city.note || "No note yet!",
-        restaurants: [],
-        accomodations: [],
-        attractions: [],
+        note: city.note,
       })),
     };
 
