@@ -62,13 +62,13 @@ router.post("/your-logs", (req, res) => {
       cities: req.body.cities.map((city) => ({
         id: uuidv4(),
         city: city.city,
-        startDate: city.startDate,
-        endDate: city.endDate,
         coordinates: {
           longitude: city.coordinates.longitude,
           latitude: city.coordinates.latitude,
         },
-        image: "http://localhost:3030/images/default.png",
+        image: "/images/atitlan.jpg",
+        startDate: city.startDate,
+        endDate: city.endDate,
         note: city.note,
       })),
     };
