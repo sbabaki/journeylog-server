@@ -73,9 +73,8 @@ router.post("/your-logs", (req, res) => {
       })),
     };
 
-    parsedLogs.push(newLog);
-
-    fs.writeFileSync("./data/logs.json", JSON.stringify(parsedLogs));
+    const updatedLogs = [newLog, ...parsedLogs];
+    fs.writeFileSync("./data/logs.json", JSON.stringify(updatedLogs));
     res.status(201).json(newLog);
   } catch (error) {
     console.error("Error saving new log:", error);
