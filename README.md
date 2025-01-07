@@ -56,7 +56,6 @@ JourneyLog is a place for travellers to map their journeys, document their trave
       "endDate": "2024-01-10",
       "note": "Exploring the streets of Paris was magical..."
     },
-    ...
   ]
 }
 ```
@@ -77,7 +76,6 @@ JourneyLog is a place for travellers to map their journeys, document their trave
     "city": "Tokyo, Japan",
     "coordinates": { "latitude": 35.6895, "longitude": 139.6917 }
   },
-  ...
 ]
 ```
 
@@ -97,7 +95,6 @@ JourneyLog is a place for travellers to map their journeys, document their trave
       "endDate": "2024-03-05",
       "note": "A beautiful serene lake surrounded by volcanoes."
     },
-    ...
   ]
 }
 ```
@@ -118,7 +115,6 @@ JourneyLog is a place for travellers to map their journeys, document their trave
       "endDate": "2024-03-05",
       "note": "A beautiful serene lake surrounded by volcanoes."
     },
-    ...
   ]
 }
 ```
@@ -155,7 +151,7 @@ npm install
 
 - Create a .env file:
 ```
-PORT=your-port
+PORT=3030
 GOOGLE_API_KEY=your-google-api-key
 ```
 
@@ -163,4 +159,7 @@ GOOGLE_API_KEY=your-google-api-key
 ```
 npm start
 ```
-6. Access the Application
+
+6. Ensure [Frontend Repository](https://github.com/sbabaki/journeylog-client) is Set Up
+
+7. Access the Application
